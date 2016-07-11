@@ -42,7 +42,7 @@ body {
 	width: 5rem;
 	flex: 5 100%;
 
-	background-image: url('images/juarez1.jpg');
+	background-image: url('../images/juarez1.jpg');
 	background-size: cover;
 
 }
