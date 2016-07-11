@@ -37,13 +37,12 @@ img {
 .logo {
 	font-family: 'GT-Cinetype-Trial-Bold';
 	-webkit-font-smoothing: antialiased;
-
 	font-size: 1.2rem;
 }
 
 #timeline {
 	padding: 2.5rem 5%;
-	padding-top: 7.5rem;
+	padding-top: 12rem;
 }
 
 #timelineRow {
@@ -59,8 +58,8 @@ img {
 	justify-content: center;
 }
 .timelineRowMedia .media {
-	height: 5rem;
-	max-width: 5rem;
+	height: 4rem;
+	max-width: 4rem;
 
 	flex: 1 5rem;
 
@@ -76,7 +75,13 @@ img {
 	z-index: 2000;
 }
 
-
+#timeline > div .timelineRowsHeading, #timeline > div .timelineRowDates {
+	opacity: 0;
+}
+#timeline > div:nth-child(6n + 1) .timelineRowsHeading,
+#timeline > div:nth-child(6n + 1) .timelineRowDates {
+	opacity: 1;
+}
 
 /* Heading */
 .timelineRowsHeading {
@@ -84,8 +89,30 @@ img {
 	left: 0;
 	top: 0;
 }
+
 .timelineRowDates {
 	position: absolute;
 	left: 0;
-	top: 0;
+	top: 1rem;
+}
+.heading {
+	font-family: 'GT-Cinetype-Trial-Bold';
+	font-size: .8rem;
+	text-transform: uppercase;
+	position: relative;
+	color: blue;
+}
+.heading:after {
+	content: '';
+	position: absolute;
+	width: 5rem;
+	height: 1px;
+	left: 5rem;
+	top: 1rem;
+	background-color: blue;
+	display: inline-block;
+}
+.date {
+	font-family: 'GT-Cinetype-Trial-Bold';
+	font-size: .8rem;
 }
