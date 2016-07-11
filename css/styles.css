@@ -18,31 +18,71 @@
 body {
 	margin: 0;
 	padding: 0;
-}
-.masthead {
-	padding: 2.5rem 5%;
-	text-align: center;
-}
-
-.logo {
-	font-family: 'GT-Cinetype-Trial';
-}
-
-#timeline {
 	background-color: #FBFBFB;
 }
 
+img { 
+
+}
+
+.masthead {
+	padding: 2.5rem 5%;
+	text-align: center;
+	background-color: #FFF;
+	position: fixed;
+	width: 100%;
+	z-index: 5000;
+}
+
+.logo {
+	font-family: 'GT-Cinetype';
+}
+
+#timeline {
+	padding: 2.5rem 5%;
+	padding-top: 7.5rem;
+}
+
 #timelineRow {
-	border: solid red 1px;
+	position: relative;
+}
+
+/* Media */
+.timelineRowMedia {
+	display: -ms-flexbox;
+	display: -webkit-flex;
 	display: flex;
+	align-items: center;	
+	justify-content: center;
 }
 .timelineRowMedia .media {
-	border: solid red 1px;
 	height: 5rem;
-	width: 5rem;
-	flex: 5 100%;
+	max-width: 5rem;
+
+	flex: 1 5rem;
 
 	background-image: url('../images/juarez1.jpg');
 	background-size: cover;
 
+	transition: all 0.1s ease;
+	cursor: pointer;
+	z-index: 1000;
+}
+.timelineRowMedia .media:hover {
+	transform: scale3d(1.4, 1.4, 1.4);
+	z-index: 2000;
+}
+
+
+
+/* Heading */
+.timelineRowsHeading {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.timelineRowDates {
+	position: absolute;
+	left: 0;
+	top: 0;
 }
