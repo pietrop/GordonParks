@@ -41,6 +41,12 @@ img {
 	flex: 3 33%;
 } 
 
+.back {
+	font-family: 'GT-Cinetype-Trial-Bold';
+	-webkit-font-smoothing: antialiased;
+	font-size: 1rem;
+	text-align: left;
+}
 .logo {
 	font-family: 'GT-Cinetype-Trial-Bold';
 	-webkit-font-smoothing: antialiased;
@@ -50,6 +56,7 @@ img {
 	font-family: 'GT-Cinetype-Trial-Bold';
 	-webkit-font-smoothing: antialiased;
 	font-size: 1rem;
+	text-align: right;
 }
 
 #timeline {
@@ -175,9 +182,20 @@ img {
     -webkit-animation-delay: .77s;
     animation-delay: .77s
 }
+
+
 .media-container {
 	padding: 2.5rem 5%;
 	padding-top: 12rem;
+}
+.media-card {
+	max-width: 30rem;
+}
+.media-card h3 {
+	font-family: 'MillerBanner';
+	font-size: 3rem;
+	margin: 0 0 2rem 0;
+	letter-spacing: 1px;
 }
 .media-card {
 	border-radius: .1rem;
@@ -185,11 +203,6 @@ img {
 	padding: 5%;
 	color: #FFF;
 	width: 50%;
-}
-.media-card .hashtags {
-	font-family: 'GT-Cinetype-Trial-Bold';
-	-webkit-font-smoothing: antialiased;
-	font-size: .8rem;
 }
 .media-card .post-information {
 	border: solid 1px #FFF;
@@ -233,6 +246,23 @@ img {
 	margin-top: 4rem;
 }
 .media-card .description:before {
+	content: '';
+	position: absolute;
+	width: 2.6rem;
+	height: 1px;
+	left: 50%;
+	top: -2rem;
+	margin-left: -1.3rem;
+	background-color: #FFF;
+}
+.media-card .hashtags {
+	font-family: 'GT-Cinetype-Trial-Bold';
+	-webkit-font-smoothing: antialiased;
+	font-size: .8rem;
+	position: relative;
+	margin-top: 4rem;
+}
+.media-card .hashtags:before {
 	content: '';
 	position: absolute;
 	width: 2.6rem;
