@@ -24,6 +24,10 @@ body {
 img { 
 
 }
+a:link, a:visited {
+	color: blue;
+	text-decoration: none;
+}
 
 .masthead {
 	padding: 2.5rem 5%;
@@ -60,7 +64,7 @@ img {
 }
 
 #timeline {
-	padding: 2.5rem 5%;
+	padding: 2.5rem 0;
 	padding-top: 12rem;
 }
 
@@ -149,47 +153,32 @@ img {
 	font-size: .8rem;
 }
 
-@-webkit-keyframes fadeIn {
-    from {
-        opacity: 0
-    }
-
-    to {
-        opacity: 1
-    }
-}
-.fade-in {
-    opacity: 0;
-    -webkit-animation: fadeIn ease-in-out 1;
-    animation: fadeIn ease-in-out 1;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-    -webkit-animation-duration: .4s;
-    animation-duration: .4s;
-    -webkit-animation-delay: .33s;
-    animation-delay: .33s
-}
-.fade-in.two {
-    -webkit-animation-duration: .4s;
-    animation-duration: .4s;
-    -webkit-animation-delay: .66s;
-    animation-delay: .66s
-}
-
-.fade-in.three {
-    -webkit-animation-duration: .4s;
-    animation-duration: .4s;
-    -webkit-animation-delay: .77s;
-    animation-delay: .77s
-}
-
-
 .media-container {
-	padding: 2.5rem 5%;
-	padding-top: 12rem;
+	padding: 2.5rem 0;
 }
+.image-card {
+	position: fixed;
+/*	max-width: 60%;*/
+}
+.image-card img {
+	width: 100%;
+}
+
 .media-card {
-	max-width: 30rem;
+	z-index: 9000;
+/*	mix-blend-mode: lighten;*/
+	position: relative;
+}
+.media-card:after {
+	content: '';
+	background-color: #93ABCF;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: -1;
+/*	mix-blend-mode: normal;*/
 }
 .media-card h3 {
 	font-family: 'MillerBanner';
@@ -202,7 +191,8 @@ img {
 	background-color: #93ABCF;
 	padding: 5%;
 	color: #FFF;
-	width: 50%;
+	width: 100%;
+	margin-top: 10rem;
 }
 .media-card .post-information {
 	border: solid 1px #FFF;
@@ -272,3 +262,31 @@ img {
 	margin-left: -1.3rem;
 	background-color: #FFF;
 }
+
+
+@media(min-width: 28rem) {
+	#timeline {
+		padding: 2.5rem 5%;
+		padding-top: 12rem;
+	}   
+	.media-container {
+		padding-top: 12rem;
+	}
+}
+
+@media(min-width: 46rem) {
+	.media-container {
+		padding: 2.5rem 5%;
+	}	
+	.media-card {
+		width: 50%;
+		max-width: 30rem;
+	}
+}
+
+
+
+
+
+
+/* Animations */
