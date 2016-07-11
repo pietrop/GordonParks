@@ -37,6 +37,9 @@ img {
 	display: -webkit-flex;
 	display: flex;
 }
+.masthead > * {
+	flex: 3 33%;
+} 
 
 .logo {
 	font-family: 'GT-Cinetype-Trial-Bold';
@@ -46,7 +49,7 @@ img {
 .sort {
 	font-family: 'GT-Cinetype-Trial-Bold';
 	-webkit-font-smoothing: antialiased;
-	font-size: 1.2rem;
+	font-size: 1rem;
 }
 
 #timeline {
@@ -72,16 +75,28 @@ img {
 
 	flex: 1 5rem;
 
-	background-image: url('../images/juarez1.jpg');
-	background-size: cover;
+/*	background-image: url('../images/juarez1.jpg');
+	background-size: cover;*/
 
 	transition: all 0.1s ease;
 	cursor: pointer;
-
+	z-index: 1000;
+	box-shadow: 0 10px 80px -40px rgba(0,0,0,0);
+	position: relative;
+	overflow: hidden;
 }
-.timelineRowMedia .media:hover {
-	transform: scale3d(2, 2, 2);
+.timelineRowMedia .media img {
+	position: absolute;
+	top: 25%;
+	left: 0;
+	width: auto;
+	height: auto;
+	transform: scale3d(1.75, 1.75, 1);
+}
+.timelineRowMedia > .media:hover {
+	transform: scale3d(2, 2, .5);
 	z-index: 2000;
+	box-shadow: 0 0 20px 0px rgba(0,0,0,.1), 0 0 0px .5px rgba(255,255,255,.3);
 }
 
 #timeline > div .timelineRowsHeading, #timeline > div .timelineRowDates {
@@ -106,6 +121,7 @@ img {
 }
 .heading {
 	font-family: 'GT-Cinetype-Trial-Bold';
+	-webkit-font-smoothing: antialiased;
 	font-size: .8rem;
 	text-transform: uppercase;
 	position: relative;
@@ -119,10 +135,10 @@ img {
 	left: 5rem;
 	top: 1rem;
 	background-color: blue;
-	display: inline-block;
 }
 .date {
 	font-family: 'GT-Cinetype-Trial-Bold';
+	-webkit-font-smoothing: antialiased;
 	font-size: .8rem;
 }
 
@@ -158,4 +174,71 @@ img {
     animation-duration: .4s;
     -webkit-animation-delay: .77s;
     animation-delay: .77s
+}
+.media-container {
+	padding: 2.5rem 5%;
+	padding-top: 12rem;
+}
+.media-card {
+	border-radius: .1rem;
+	background-color: #93ABCF;
+	padding: 5%;
+	color: #FFF;
+	width: 50%;
+}
+.media-card .hashtags {
+	font-family: 'GT-Cinetype-Trial-Bold';
+	-webkit-font-smoothing: antialiased;
+	font-size: .8rem;
+}
+.media-card .post-information {
+	border: solid 1px #FFF;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	padding: .8rem;
+	position: relative;
+}
+.media-card .post-information:after {
+	content: '';
+	position: absolute;
+	width: 1px;
+	height: 2.6rem;
+	left: 50%;
+	top: -1.3rem;
+	background-color: #FFF;
+}
+.media-card .time-stamp {
+	font-family: 'GT-Cinetype-Trial-Bold';
+	-webkit-font-smoothing: antialiased;
+	font-size: .9rem;
+	flex: 2 50%;
+	text-align: center;
+	letter-spacing: 1px;
+}
+.media-card .retweets-count {
+	font-family: 'GT-Cinetype-Trial-Bold';
+	-webkit-font-smoothing: antialiased;
+	font-size: .9rem;
+	flex: 2 50%;
+	text-align: center;
+	letter-spacing: 1px;
+}
+.media-card .description {
+	font-family: "Graphik";
+	line-height: 1.4;
+	font-size: .95rem;
+	font-weight: 300;
+	position: relative;
+	margin-top: 4rem;
+}
+.media-card .description:before {
+	content: '';
+	position: absolute;
+	width: 2.6rem;
+	height: 1px;
+	left: 50%;
+	top: -2rem;
+	margin-left: -1.3rem;
+	background-color: #FFF;
 }
