@@ -1,0 +1,48 @@
+* {
+	vertical-align: baseline; box-sizing: border-box;
+
+	font-feature-settings: "kern" 1, "liga" 1, "frac" 1;
+	-webkit-font-feature-settings: "kern" 1, "liga" 1, "frac" 1;  /* No variation */
+    -moz-font-feature-settings: "kern" 1, "liga" 1, "frac" 1;  /* Firefox 15.0 onwards explicitly set feature values */
+    -ms-font-feature-settings: "kern" 1, "liga" 1, "frac" 1; 
+/*    border: solid red 1px;*/
+}
+@font-face {
+	font-family: "GT-Cinetype-Trial-Bold";
+	src: url(../css/fonts/GT-Cinetype-Trial-Bold.eot);
+	src: url(../css/fonts/GT-Cinetype-Trial-Bold?#iefix) format("embedded-opentype"), url(../css/fonts/GT-Cinetype-Trial-Bold.woff) format("woff"), url(../css/fonts/GT-Cinetype-Trial-Bold.ttf) format("truetype");
+	font-weight: 400;
+	font-style: normal
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+.masthead {
+	padding: 2.5rem 5%;
+	text-align: center;
+}
+
+.logo {
+	font-family: 'GT-Cinetype-Trial';
+}
+
+#timeline {
+	background-color: #FBFBFB;
+}
+
+#timelineRow {
+	border: solid red 1px;
+	display: flex;
+}
+.timelineRowMedia .media {
+	border: solid red 1px;
+	height: 5rem;
+	width: 5rem;
+	flex: 5 100%;
+
+	background-image: url('images/juarez1.jpg');
+	background-size: cover;
+
+}
