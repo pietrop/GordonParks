@@ -173,6 +173,16 @@ a:hover, a:focus, a:active {
 	height: 2px;
 	border: solid #333 2px;
 	top: 0;
+	transform: translate3d(0, 1rem, 0);
+
+    -webkit-animation: topToBottom ease 1;
+    animation: topToBottom ease 1;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-duration: .6s;
+    animation-duration: .6s;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
 }
 .logo a:after {
 	content: '';
@@ -182,6 +192,16 @@ a:hover, a:focus, a:active {
 	height: 2px;
 	border: solid #333 2px;
 	bottom: 0;
+	transform: translate3d(0, -1rem, 0);
+
+    -webkit-animation: bottomToTop ease 1;
+    animation: bottomToTop ease 1;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-duration: .6s;
+    animation-duration: .6s;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
 }
 .logo:hover {
 	opacity: .3;
@@ -637,21 +657,72 @@ input:focus, textarea:focus {
 /* Animations */
 @-webkit-keyframes fadeIn {
     from {
-        opacity: 0
+        opacity: 0;
     }
 
     to {
-        opacity: 1
+        opacity: 1;
     }
 }
 
 @keyframes fadeIn {
     from {
-        opacity: 0
+        opacity: 0;
     }
 
     to {
-        opacity: 1
+        opacity: 1;
+    }
+}
+
+/* Animations */
+@-webkit-keyframes topToBottom {
+    from {
+        transform: translate3d(0, 1rem, 0);
+    }
+
+    to {
+    	transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes topToBottom {
+    from {
+        transform: translate3d(0, 1rem, 0);
+    }
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+}
+/*
+.top-to-bottom {
+    opacity: 0;
+    -webkit-animation: topToBottom ease-in-out 1;
+    animation: topToBottom ease-in-out 1;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-duration: .4s;
+    animation-duration: .4s;
+    -webkit-animation-delay: .33s;
+    animation-delay: .33s
+}*/
+
+/* Animations */
+@-webkit-keyframes bottomToTop {
+    from {
+        transform: translate3d(0, -1rem, 0);
+    }
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes bottomToTop {
+    from {
+        transform: translate3d(0, -1rem, 0);
+    }
+    to {
+        transform: translate3d(0, 0, 0);
     }
 }
 
