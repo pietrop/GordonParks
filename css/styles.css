@@ -89,6 +89,24 @@ body {
 img {
 
 }
+
+button {
+	-webkit-appearance: none;
+	width: 5rem;
+	padding: .8rem 1rem;
+	font-family: 'GT-Cinetype-Trial-Bold';
+	font-size: 1rem;
+	width: auto;
+	background-color: blue;
+	color: #FFF;
+	border: none;
+	cursor: pointer;
+	transition: all .2s ease;
+}
+button:hover, button:focus {
+	background-color: #333;
+}
+
 .container-fluid, #main {
 	height: 100%;
 }
@@ -408,12 +426,103 @@ a:link, a:visited {
 	background-color: rgba(240,240,240,.1);
 }
 
+/* Curration Pages */
+.search {
+	padding: 8.45rem 5%;
+	font-family: 'GT-Cinetype-Trial-Bold';
+	letter-spacing: 1px;
+}
+.results {
+	padding: 8.45rem 0;
+	font-family: 'GT-Cinetype-Trial-Bold';
+	letter-spacing: 1px;	
+}
+.post-information {
+	padding: 2.3rem 5% 2.3rem 5%;
+	background-color: #EEE;
+}
+.entry {
+	padding: 2rem 5% 0 5%;
+	margin: 2rem 0 0 0;
+	border-top: solid #EEE 1px;
+}
+.entry img {
+	max-width: 10rem;
+}
+.entry label, .post-row label {
+	margin: 1rem 0 .4rem 0;
+	display: block;
+	font-size: .85rem;
+}
+.post-row {
+	background-color: #EEE;
+	padding: 1rem  5% 2rem 5%;
+	margin: 6rem 0 6rem 0;
+/*	background-color: #EEE;*/
+}
+.entry-submit {
+	margin: 0 5%;
+	border-top: solid #EEE 1px;
+	margin-top: 2rem;
+	padding-top: 2rem;
+}
+.entry .entry-title {
+	margin: 0 0 .6rem 0;
+}
+.entry .entry-title label {
+	margin-top: 0;
+}
+.entry .entry-check {
+	display: inline-block;
+	height: 100%;
+	font-size: 3rem;
+	width: 2rem;
+}
+.entry .entry-check > .middle {
+	vertical-align: top;
+}
+.entry-photo {
+	display: inline-block;
+	vertical-align: top;
+	margin: 0 1rem 1rem 0;
+}
+.entry-content {
+	display: inline-block;
+	vertical-align: top;
+	max-width: 30rem;
+	width: 100%;
+}
+
+
+/* Inputs */
+input, textarea {
+	padding: .6rem;
+	font-family: 'Graphik';
+	font-weight: 300;
+	font-size: .9rem;
+	letter-spacing: .5px;
+	width: 100%;
+	outline: none;
+	border: solid #DDD 1px;
+}
+input:focus, textarea:focus {
+	border: solid blue 1px;
+}
+.post-information label {
+/*	border: solid red 1px;*/
+	display: inline-block;
+	padding: 1.2rem 0 .5rem 0;
+}
+
 @media(min-width: 28rem) {
 	#timeline {
 		padding: 2.5rem 5%;
 		padding-top: 12rem;
 	}
 	.media-container {
+	}
+	.search {
+		padding: 8.45rem 10%;
 	}
 }
 
@@ -449,6 +558,9 @@ a:link, a:visited {
 		background-color: blue;
 	}
 
+	.search {
+		padding: 8.45rem 30%;
+	}
 
 	.media-container {
 		padding: 6.45rem 5%;
