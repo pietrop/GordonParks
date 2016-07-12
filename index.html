@@ -36,7 +36,7 @@
             <div id="timelineRow" class="">
 
           <div class="timelineRowsHeading">
-            <h2 class="heading fade-in three">  <%= r.heading %></h2>
+            <h2 class="heading fade-in three">  <%= r.heading.split("+")[0] %></h2>
           </div>
           <div class="timelineRowDates">
             <p class="date">  <%= r.date %></p>
@@ -84,8 +84,15 @@
             </div>
             <div class="description">
               <p><%= description %></p>
+              <a href='<%= tweetUrl %>' target='_blank'>source</a>
             </div>
-            <div class="hashtags"><%= hashtag %></div>
+            <div class="hashtags">
+              <% _.each(hashtag, function(h) { %>
+            #<%= h %>
+            <%}) %>
+            </div>
+            <a href='http://twitter.com/<%= username %>'  target='_blank'>@<%= username %></a>
+
             </div>
           </div>
         </div>

@@ -2,8 +2,8 @@ var demoRows =[{"heading":"Tue Jul 12 21:56:06 +0000 2016","media":[{"id":0,"twi
 
 
 var newDefaultTimeline = new Timeline({
-  title:"Awesome Title ",
-  description: "Awesome Description",
+  title:"#BatonRouge",
+  description: "Seached on 12 July 2016 17:06 by <a href=''>@yian</a> at <a href='http://www.vox.com' target='_blank' >@VoxMediaInc</a>",
   hashtag:[
     "#example",  "#example2",
   ],
