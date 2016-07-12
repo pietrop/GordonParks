@@ -483,14 +483,14 @@ a:hover, a:focus, a:active {
 	left: 0;
 	top: 50%;
 	color: #333;
-	padding: 1rem;
+	padding: 1rem 1rem 1rem 1.2rem;
 	background-color: rgba(240,240,240,.1);
 }
 .next {
 	right: 0;
 	top: 50%;
 	color: #333;
-	padding: 1rem;
+	padding: 1rem 1.2rem 1rem 1.2rem;
 	background-color: rgba(240,240,240,.1);
 }
 
