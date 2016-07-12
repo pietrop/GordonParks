@@ -124,11 +124,22 @@ a:link, a:visited {
 	font-size: 1rem;
 	text-align: left;
 }
+.back span {
+	transition: all .2s ease;
+}
+.back:hover span {
+	margin-left: -.2rem;
+}
 .logo {
 	font-family: 'GT-Cinetype-Trial-Bold';
 	-webkit-font-smoothing: antialiased;
 	font-size: 1.2rem;
+	transition: all .2s ease;
 	text-transform: uppercase;
+	letter-spacing: .1rem;
+}
+.logo:hover {
+	opacity: .3;
 }
 .logo a:link, .logo a:visited {
 	color: #111;
