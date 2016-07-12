@@ -9,12 +9,13 @@ var client = new Twitter({
 });
 
 var filterTweets = function(tweets, retweetThreshold) {
-  var media = [];     
+  var media = [];
+  var counter = 0;     
   for (var i = 0; i < tweets.statuses.length; i++) {
     var tweet = tweets.statuses[i];
     if (tweet.entities.media) {
       media.push({
-         "id": i,
+         "id": counter,
          "twitter_id": tweet.entities.media[0].id_str,
          "title": "Media Title",
          "hashtag": tweet.entities.hashtags.map(function(tag) {return tag.text}),
@@ -22,11 +23,12 @@ var filterTweets = function(tweets, retweetThreshold) {
          "retweetsCount": tweet.retweet_count,
          "favoritesCount": tweet.favorite_count,
          "description": tweet.text,
-         "sourceUrl": tweet.entities.media[0].expanded_url,
-         "sourceDescription": tweet.user.name,
+         "tweetUrl": tweet.entities.media[0].expanded_url,
+         "username": tweet.user.name,
          "mediaUrl": tweet.entities.media[0].media_url,
          "mediaType": tweet.entities.media[0].type
       });
+      counter++;
     }
   }
   return media;
