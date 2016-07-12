@@ -113,6 +113,10 @@ button:hover, button:focus {
 a:link, a:visited {
 	color: blue;
 	text-decoration: none;
+	transition: all .2s ease;
+}
+a:hover, a:focus, a:active {
+	color: #92AAD0;
 }
 .masthead {
 	padding: 2.5rem 5%;
@@ -348,6 +352,7 @@ a:link, a:visited {
 	display: flex;
 	padding: .8rem;
 	position: relative;
+	background: transparent;
 }
 .media-card .post-information:after {
 	content: '';
