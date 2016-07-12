@@ -194,6 +194,24 @@ a:link, a:visited {
 	position: relative;
 }
 
+/* Row heading */
+.heading {
+	font-family: 'GT-Cinetype-Trial-Bold';
+	-webkit-font-smoothing: antialiased;
+	font-size: .8rem;
+	text-transform: uppercase;
+	position: relative;
+	color: blue;
+	margin-top: 2rem;
+	margin-bottom: .2rem;
+}
+.date {
+	margin-top: 0;
+}
+.timelineRowsHeading, .timelineRowDates {
+	text-align: center;
+}
+
 /* Media */
 .timelineRowMedia {
 	display: -ms-flexbox;
@@ -240,35 +258,8 @@ a:link, a:visited {
 	opacity: 1;
 }
 
-/* Heading */
-.timelineRowsHeading {
-	position: absolute;
-	left: 0;
-	top: 0;
-}
 
-.timelineRowDates {
-	position: absolute;
-	left: 0;
-	top: 1rem;
-}
-.heading {
-	font-family: 'GT-Cinetype-Trial-Bold';
-	-webkit-font-smoothing: antialiased;
-	font-size: .8rem;
-	text-transform: uppercase;
-	position: relative;
-	color: blue;
-}
-.heading:after {
-	content: '';
-	position: absolute;
-	width: 5rem;
-	height: 1px;
-	left: 8rem;
-	top: 1rem;
-	background-color: blue;
-}
+
 .date {
 	font-family: 'GT-Cinetype-Trial-Bold';
 	-webkit-font-smoothing: antialiased;
@@ -281,7 +272,6 @@ a:link, a:visited {
 }
 
 /* Image Card */
-
 .image-card img {
 	width: 100%;
 }
@@ -425,17 +415,41 @@ a:link, a:visited {
 	}
 	.media-container {
 	}
-	.image-card.small {
-		text-align: right;
-		padding: 4.5%;
-	}
-	.image-card.small img {
-		max-width: 39.35rem;
-		width: auto;
-	}
 }
 
 @media(min-width: 46rem) {
+
+	/* Heading */
+	.timelineRowsHeading {
+		position: absolute;
+		left: 0;
+		top: 0;
+		text-align: left;
+	}
+	.timelineRowDates {
+		position: absolute;
+		left: 0;
+		top: 1rem;
+		text-align: left;
+	}
+	.heading {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+	.date {
+		margin-top: 0;
+	}
+	.heading:after {
+		content: '';
+		position: absolute;
+		width: 5rem;
+		height: 1px;
+		left: 8rem;
+		top: 1rem;
+		background-color: blue;
+	}
+
+
 	.media-container {
 		padding: 6.45rem 5%;
 	}
@@ -447,6 +461,14 @@ a:link, a:visited {
 	.image-card {
 		position: fixed;
 		width: 90%;
+	}
+	.image-card.small {
+		text-align: right;
+		padding: 4.5%;
+	}
+	.image-card.small img {
+		max-width: 39.35rem;
+		width: auto;
 	}
 }
 
