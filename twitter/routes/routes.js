@@ -16,12 +16,14 @@ var filterTweets = function(tweets, retweetThreshold) {
     var tweet = tweets.statuses[i];
     if (tweet.entities.media) {
       media.push({
+         "title": "Media Title"
          "hashtag": tweet.entities.hashtags.map(function(tag) {return tag.text}),
          "timestamp": tweet.created_at,
          "retweetsCount": tweet.retweet_count,
          "favoritesCount": tweet.favorite_count,
          "description": tweet.text,
          "sourceUrl": tweet.entities.media[0].expanded_url,
+         "sourceDescription": tweet.user.name,
          "mediaUrl": tweet.entities.media[0].media_url,
          "mediaType": tweet.entities.media[0].type
       });
