@@ -427,7 +427,7 @@ a:link, a:visited {
 }
 
 /* Curration Pages */
-.search {
+.search, .story-list {
 	padding: 8.45rem 5%;
 	font-family: 'GT-Cinetype-Trial-Bold';
 	letter-spacing: 1px;
@@ -493,6 +493,15 @@ a:link, a:visited {
 	width: 100%;
 }
 
+/* List */
+.story-collection {
+	margin-left: 0;
+	padding-left: 0;
+}
+.story-collection li {
+	list-style: none;
+	padding-bottom: .8rem;
+}
 
 /* Inputs */
 input, textarea {
