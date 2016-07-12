@@ -6,34 +6,101 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Visual Narrative title </title>
+  <link href="css/styles.css" type="text/css" rel="stylesheet" media="all">
 </head>
 <body>
 
-  <div id="timeline">
+<div id="main">
 
-    <div id="timelineRow">
-      <div class="timelineRowMedia">
-        <img class="media" id="mediaId_" src="" alt="" />
-        <img class="media" id="mediaId_" src="" alt="" />
-        <img class="media" id="mediaId_" src="" alt="" />
-        <video class="media" src="videofile.ogg" autoplay poster="posterimage.jpg">
+</div>
 
-        </video>
-      </div>
-      <div class="timelineRowsHeading">
-        <h2 class="heading">  </h2>
-      </div>
-      <div class="timelineRowDates">
-        <p class="date"> </p>
-      </div>
+<script id="timeline" type="text/template">
+  <div class='masthead fade-in'>
+    <div class="back"></div>
+    <div class="logo"><a href="index.html"><%= title %></a></div>
+    <div class="sort">Sort By:</div>
+  </div>
 
-    </div><!-- end timelineRow-->
+  <div id="timeline" class="fade-in two">
+
+<div id="timelineRow" class="">
+  <% _.each(rows, function(r) { %>
+
+
+    <div class="timelineRowsHeading">
+      <h2 class="heading">  <%= r.heading %></h2>
+    </div>
+    <div class="timelineRowDates">
+      <p class="date">  <%= r.date %></p>
+    </div>
+<div class="timelineRowMedia">
+    <% _.each(r.medias, function(m) { %>
+
+        <div class="media" id="mediaId_" alt="">
+          <a href="#/timeline/media/<%= m.id %>">  <img id="mediaId_" class="media" src="<%= m.imgUrl %>" style="border: red;" alt=""></a>
+        </div>
+
+    <% }) %>
+  </div>
+  <% }) %>
+  </div><!-- end timelineRow-->
   </div><!-- end timeline -->
+</script>
+
+<script id="row" type="text/template">
+
+</script>
+
+  <script id="mediaShow" type="text/template">
+
+    <div class='masthead fade-in'>
+      <div class="back"><a href="#timeline">< </a></div>
+      <div class="logo"><%= timelineTitle %></div>
+      <div class="sort">Sort By:</div>
+    </div>
+
+    <div class="media-container">
+      <div class="image-card">
+        <img class="media" id="mediaId_" src="<%= imgUrl %>" alt="">
+      </div>
+
+
+      <div class="media-card  fade-in two">
+        <h3><%= title %></h3>
+        <div class="post-information">
+        <div class="time-stamp">11-07-2016</div>
+        <div class="retweets-count"><span><%= retweetsCount %></span></div>
+        </div>
+        <div class="description">
+          <p><%= description %></p>
+        </div>
+        <div class="hashtags"><%= hashtag %></div>
+          <div class="bg"></div>
+      </div>
+    </div>
+
+
+
+
+
+  </script>
+
+
+
 
   <script type="text/javascript" src="vendor/jquery.min.js"></script>
   <script type="text/javascript"  src="vendor/underscore-min.js"></script>
   <script type="text/javascript"  src="vendor/backbone-min.js"></script>
-    <script src="./vendor/backbone.touch.js"></script>
+  <script src="./vendor/backbone.touch.js"></script>
+
+
+  <script src="./config.js"></script>
+  <script src="./models.js"></script>
+  <script src="./views.js"></script>
+  <script src="./collections.js"></script>
+  <script src="./router.js"></script>
+  <script src="./app.js"></script>
+  <script src="./seeds.js"></script>
 
 </body>
 </html>
