@@ -428,6 +428,13 @@ a:hover, a:focus, a:active {
 	position: relative;
 	margin-top: 4rem;
 }
+.media-card .description a:link, .media-card .description a:visited{
+	color: #FEFEFE;
+	border-bottom: solid #FFF 1px;
+}
+.media-card .description a:hover, .media-card .description a:focus, .media-card .description a:active {
+	margin-left: .2rem;
+}
 .media-card .description:before {
 	content: '';
 	position: absolute;
@@ -484,14 +491,14 @@ a:hover, a:focus, a:active {
 	top: 50%;
 	color: #333;
 	padding: 1rem 1rem 1rem 1.2rem;
-	background-color: rgba(240,240,240,.1);
+	background-color: rgba(240,240,240,.2);
 }
 .next {
 	right: 0;
 	top: 50%;
 	color: #333;
 	padding: 1rem 1.2rem 1rem 1.2rem;
-	background-color: rgba(240,240,240,.1);
+	background-color: rgba(240,240,240,.2);
 }
 
 /* Curration Pages */
