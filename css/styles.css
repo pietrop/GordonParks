@@ -4,11 +4,7 @@
 	font-feature-settings: "kern" 1, "liga" 1, "frac" 1;
 	-webkit-font-feature-settings: "kern" 1, "liga" 1, "frac" 1;  /* No variation */
     -moz-font-feature-settings: "kern" 1, "liga" 1, "frac" 1;  /* Firefox 15.0 onwards explicitly set feature values */
-<<<<<<< HEAD
     -ms-font-feature-settings: "kern" 1, "liga" 1, "frac" 1;
-=======
-    -ms-font-feature-settings: "kern" 1, "liga" 1, "frac" 1; 
->>>>>>> 841380213ccefec87a1c9e5743993adc8e7406a5
 /*    border: solid red 1px;*/
 }
 @font-face {
@@ -26,30 +22,18 @@ body {
 }
 
 img {
-<<<<<<< HEAD
-
-=======
->>>>>>> 841380213ccefec87a1c9e5743993adc8e7406a5
 }
 a:link, a:visited {
 	color: blue;
 	text-decoration: none;
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> 841380213ccefec87a1c9e5743993adc8e7406a5
 .masthead {
 	padding: 2.5rem 5%;
 	text-align: center;
 	background-color: #FFF;
 	position: fixed;
 	width: 100%;
-<<<<<<< HEAD
-	z-index: 5000;
-=======
 	z-index: 15000;
->>>>>>> 841380213ccefec87a1c9e5743993adc8e7406a5
 
 	display: -ms-flexbox;
 	display: -webkit-flex;
@@ -57,11 +41,7 @@ a:link, a:visited {
 }
 .masthead > * {
 	flex: 3 33%;
-<<<<<<< HEAD
 }
-=======
-} 
->>>>>>> 841380213ccefec87a1c9e5743993adc8e7406a5
 
 .back {
 	font-family: 'GT-Cinetype-Trial-Bold';
@@ -81,6 +61,18 @@ a:link, a:visited {
 	text-align: right;
 }
 
+.intro h1 {
+	font-family: 'MillerBanner';
+	font-size: 3rem;
+	text-align: center;
+}
+.intro p {
+	font-family: 'MillerBanner';
+	font-size: 3rem;
+	text-align: center;
+}
+
+
 #timeline {
 	padding: 2.5rem 0;
 	padding-top: 12rem;
@@ -95,11 +87,7 @@ a:link, a:visited {
 	display: -ms-flexbox;
 	display: -webkit-flex;
 	display: flex;
-<<<<<<< HEAD
 	align-items: center;
-=======
-	align-items: center;	
->>>>>>> 841380213ccefec87a1c9e5743993adc8e7406a5
 	justify-content: center;
 }
 .timelineRowMedia .media {
@@ -135,13 +123,8 @@ a:link, a:visited {
 #timeline > div .timelineRowsHeading, #timeline > div .timelineRowDates {
 	opacity: 0;
 }
-<<<<<<< HEAD
-#timeline > div:nth-child(6n + 1) .timelineRowsHeading,
-#timeline > div:nth-child(6n + 1) .timelineRowDates {
-=======
 #timeline > div:nth-child(6n + 2) .timelineRowsHeading,
 #timeline > div:nth-child(6n + 2) .timelineRowDates {
->>>>>>> 841380213ccefec87a1c9e5743993adc8e7406a5
 	opacity: 1;
 }
 
@@ -181,29 +164,14 @@ a:link, a:visited {
 }
 
 .media-container {
-<<<<<<< HEAD
-	padding: 2.5rem 0;
-}
-.image-card {
-	position: fixed;
-/*	max-width: 60%;*/
-}
-=======
 	padding: 6rem 0;
 }
 
->>>>>>> 841380213ccefec87a1c9e5743993adc8e7406a5
 .image-card img {
 	width: 100%;
 }
 
 .media-card {
-<<<<<<< HEAD
-	z-index: 9000;
-/*	mix-blend-mode: lighten;*/
-	position: relative;
-=======
->>>>>>> 841380213ccefec87a1c9e5743993adc8e7406a5
 }
 .media-card:after {
 	content: '';
@@ -223,22 +191,15 @@ a:link, a:visited {
 	letter-spacing: 1px;
 }
 .media-card {
-<<<<<<< HEAD
-=======
 	z-index: 9000;
 /*	mix-blend-mode: lighten;*/
 	position: relative;
->>>>>>> 841380213ccefec87a1c9e5743993adc8e7406a5
 	border-radius: .1rem;
 	background-color: #93ABCF;
 	padding: 5%;
 	color: #FFF;
 	width: 100%;
-<<<<<<< HEAD
-	margin-top: 10rem;
-=======
 /*	margin-top: 20rem;*/
->>>>>>> 841380213ccefec87a1c9e5743993adc8e7406a5
 }
 .media-card .post-information {
 	border: solid 1px #FFF;
@@ -314,15 +275,9 @@ a:link, a:visited {
 	#timeline {
 		padding: 2.5rem 5%;
 		padding-top: 12rem;
-<<<<<<< HEAD
 	}
 	.media-container {
-		padding-top: 12rem;
-=======
-	}   
-	.media-container {
 /*		padding-top: 12rem;*/
->>>>>>> 841380213ccefec87a1c9e5743993adc8e7406a5
 	}
 }
 
@@ -333,8 +288,6 @@ a:link, a:visited {
 	.media-card {
 		width: 50%;
 		max-width: 30rem;
-<<<<<<< HEAD
-=======
 		margin-top: 10rem;
 	}
 	.image-card {
@@ -343,7 +296,6 @@ a:link, a:visited {
 	}
 	.image-card {
 		width: 90%;
->>>>>>> 841380213ccefec87a1c9e5743993adc8e7406a5
 	}
 }
 
@@ -352,8 +304,4 @@ a:link, a:visited {
 
 
 
-<<<<<<< HEAD
 /* Animations */
-=======
-/* Animations */
->>>>>>> 841380213ccefec87a1c9e5743993adc8e7406a5
