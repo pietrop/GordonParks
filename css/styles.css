@@ -147,7 +147,7 @@ a:hover, a:focus, a:active {
 	text-align: left;
 }
 .back span {
-	transition: all .2s ease;
+	transition: margin .2s ease;
 }
 .back:hover span {
 	margin-left: -.2rem;
