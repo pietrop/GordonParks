@@ -288,10 +288,17 @@ a:hover, a:focus, a:active {
 	justify-content: center;
 }
 .timelineRowMedia .media {
-	height: 6rem;
-	max-width: 6rem;
+	height: 9rem;
+	max-width: 9rem;
 
 	flex: 1 5rem;
+
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none;   /* Chrome/Safari/Opera */
+	-khtml-user-select: none;    /* Konqueror */
+	-moz-user-select: none;      /* Firefox */
+	-ms-user-select: none;       /* Internet Explorer/Edge */
+	user-select: none; 
 
 /*	background-image: url('../images/juarez1.jpg');
 	background-size: cover;*/
@@ -661,7 +668,7 @@ input:focus, textarea:focus {
 	.timelineRowsHeading {
 		position: absolute;
 		left: 0;
-		top: 2.5rem;
+		top: 4rem;
 		text-align: left;
 	}
 	.timelineRowDates {
@@ -682,7 +689,7 @@ input:focus, textarea:focus {
 		position: absolute;
 		width: 5rem;
 		height: 1px;
-		left: 8rem;
+		left: 9rem;
 		top: .5rem;
 		background-color: blue;
 	}
