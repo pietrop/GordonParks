@@ -24,7 +24,7 @@ var filterTweets = function(tweets, retweetThreshold) {
          "favoritesCount": tweet.favorite_count,
          "description": tweet.text,
          "tweetUrl": tweet.entities.media[0].expanded_url,
-         "username": tweet.user.name,
+         "username": tweet.user.screen_name,
          "mediaUrl": tweet.entities.media[0].media_url,
          "mediaType": tweet.entities.media[0].type
       });
