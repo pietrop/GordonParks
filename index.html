@@ -36,7 +36,7 @@
             <div id="timelineRow" class="">
 
           <div class="timelineRowsHeading">
-            <h2 class="heading">  <%= r.heading %></h2>
+            <h2 class="heading fade-in three">  <%= r.heading %></h2>
           </div>
           <div class="timelineRowDates">
             <p class="date">  <%= r.date %></p>
@@ -61,8 +61,8 @@
 
       <script id="mediaShow" type="text/template">
 
-        <div class='masthead fade-in'>
-          <div class="back"><a href="#timeline">< </a></div>
+        <div class='masthead'>
+          <div class="back"><a href="#timeline"><span>←</span> Back</a></div>
             <div class="logo"><a href="index.html">Ida</a></div>
           <div class="sort">Sort By:</div>
         </div>
@@ -79,7 +79,7 @@
             <div class="media-card-bg">
             <h3><%= timestamp %></h3>
             <div class="post-information">
-            <div class="time-stamp">11-07-2016</div>
+            <div class="time-stamp">Retweets</div>
             <div class="retweets-count"><span><%= retweetsCount %></span></div>
             </div>
             <div class="description">
@@ -90,9 +90,6 @@
           </div>
         </div>
       </script>
-
-
-
 
       <script type="text/javascript" src="vendor/jquery.min.js"></script>
       <script type="text/javascript"  src="vendor/underscore-min.js"></script>

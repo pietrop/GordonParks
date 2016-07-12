@@ -147,7 +147,7 @@ a:hover, a:focus, a:active {
 	text-align: left;
 }
 .back span {
-	transition: all .2s ease;
+	transition: margin .2s ease;
 }
 .back:hover span {
 	margin-left: -.2rem;
@@ -203,6 +203,11 @@ a:hover, a:focus, a:active {
     -webkit-animation-delay: 1s;
     animation-delay: 1s;
 }
+/*.fade-in .logo a:before, .fade-in .logo a:after {
+	animation: none;
+	-webkit-animation: none;
+	transform: translate3d(0, 0, 0);
+}*/
 .logo:hover {
 	opacity: .3;
 }
@@ -303,24 +308,26 @@ a:hover, a:focus, a:active {
 }
 .timelineRowMedia .media img {
 	position: absolute;
-	top: 25%;
+	top: 22%;
 	left: 0;
 	width: auto;
 	height: auto;
-	transform: scale3d(1.75, 1.75, 1);
+	transform: scale3d(1.80, 1.80, 1);
 }
 .timelineRowMedia > .media:hover {
-	transform: scale3d(1.75, 1.75, 1);
+	transform: scale3d(1.80, 1.80, 1);
 	z-index: 2000;
 	box-shadow: 0 0 20px 0px rgba(0,0,0,.1), 0 0 0px .5px rgba(255,255,255,.3);
 }
 
 #timeline > div .timelineRowsHeading, #timeline > div .timelineRowDates {
 	opacity: 0;
+	display: none;
 }
-#timeline > div:nth-child(6n + 2) .timelineRowsHeading,
-#timeline > div:nth-child(6n + 2) .timelineRowDates {
+#timeline > div:nth-child(2n + 2) .timelineRowsHeading,
+#timeline > div:nth-child(2n + 2) .timelineRowDates {
 	opacity: 1;
+	display: block;
 }
 
 
@@ -362,7 +369,8 @@ a:hover, a:focus, a:active {
 .media-card h3 {
 	font-family: 'MillerBanner';
 	font-size: 3rem;
-	margin: 2rem 0 2rem 0;
+	margin: 2rem 0 2.6rem 0;
+	line-height: 1;
 	letter-spacing: 1px;
 }
 .media-card .post-information {
@@ -503,14 +511,46 @@ a:hover, a:focus, a:active {
 	padding: 2.3rem 5% 2.3rem 5%;
 	background-color: #EEE;
 }
+.post-information .section-label {
+	font-size: .9rem;
+	margin-bottom: 1rem;
+	color: #333;
+}
+.post-information input.headline {
+	font-family: 'MillerBanner';
+	text-transform: capitalize;
+	font-size: 3.4rem;
+	line-height: 1;
+	text-align: center;
+	margin: 0 0 .2rem 0;
+	color: #333;
+}
+.post-information input.description {
+	font-family: 'Miller-Text';
+	font-size: 1rem;
+	line-height: 1.5;
+	text-align: center;
+	margin: 0 0 1rem 0;
+	color: #333;
+	position: relative;
+}
+.post-information input {
+	border: none;
+	background-color: transparent;
+	border-bottom: solid 1px transparent;
+}
+.post-information input:focus {
+	border: none;
+	border-bottom: solid 1px #DDD;
+}
 
-.post-information > div { 
+/*.post-information > div { 
 	display: block;
 }
 .post-information div input, .post-information div textarea { 
 	max-width: 30rem;
 	display: block;
-}
+}*/
 
 .entry {
 	padding: 2rem 5% 0 5%;
@@ -608,11 +648,15 @@ input:focus, textarea:focus {
 
 @media(min-width: 46rem) {
 
+	.intro {
+		padding: 0 25%;
+	}
+
 	/* Heading */
 	.timelineRowsHeading {
 		position: absolute;
 		left: 0;
-		top: 0;
+		top: 1.25rem;
 		text-align: left;
 	}
 	.timelineRowDates {
@@ -634,7 +678,7 @@ input:focus, textarea:focus {
 		width: 5rem;
 		height: 1px;
 		left: 8rem;
-		top: 1rem;
+		top: .5rem;
 		background-color: blue;
 	}
 
@@ -767,6 +811,13 @@ input:focus, textarea:focus {
 .fade-in.three {
     -webkit-animation-duration: .4s;
     animation-duration: .4s;
-    -webkit-animation-delay: .77s;
-    animation-delay: .77s
+    -webkit-animation-delay: .99s;
+    animation-delay: .99s
+}
+
+.fade-in.four {
+    -webkit-animation-duration: .4s;
+    animation-duration: .4s;
+    -webkit-animation-delay: 1.22s;
+    animation-delay: 1.22s
 }
