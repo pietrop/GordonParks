@@ -1,11 +1,47 @@
+// var currentModelId = 0;
 var MediaShowView = Backbone.View.extend({
   tagName: 'div',
   className: 'container-fluid',
+
 
   initialize: function() {
 
        this.listenTo(this.model, "change", this.render);
   },
+
+
+  events :{
+    "click .next": "moveToNextImg",
+    "click .previous":"moveToPrevImg"
+  },
+  moveToNextImg: function(e){
+    // console.log(this.model.id+1)
+    // currentModelId = this.model.id;
+    var nextModel = this.model.id+1;
+    var numberOfModels =  mediaList.length;
+    // if(nextModel<numberOfModels){
+      var router = new Router();
+      router.navigate("timeline/media/"+nextModel, {trigger: true});
+    // }else{
+    //   alert("this is the last image")
+    // }
+    // alert(nextModel)
+  },
+  moveToPrevImg: function(e){
+    // console.log(this.model.id+1)
+    // currentModelId = this.model.id ;
+    var prevModel = this.model.id-1;
+    console.log(prevModel)
+    var numberOfModels =  mediaList.length;
+    // if(prevModel< 0 ){
+      var router = new Router();
+      router.navigate("timeline/media/"+prevModel, {trigger: true});
+    // }else{
+    //   alert("this is the first image")
+    // }
+    // alert(nextModel)
+  },
+
 
   template: _.template($("#mediaShow").html()),
 
@@ -19,7 +55,7 @@ var MediaShowView = Backbone.View.extend({
 // //////////////////////////////
 var TimelineView = Backbone.View.extend({
   tagName: 'div',
-  className: 'container-fluid',
+  // className: 'container-fluid',
   // events:{
     // "click .media": "showMedia"
   // },
@@ -41,42 +77,3 @@ var TimelineView = Backbone.View.extend({
   }
 
 })
-
-
-
-
-
-
-
-// var OneMediaForIndexView = Backbone.View.extend({
-//   tagName: 'div',
-//   className: 'mediaCard',
-//   id: "media-n",//+this.model.id+"",
-//   initialize: function() {
-//       //connect to changes in the model to update the view
-//        this.listenTo(this.model, "change", this.render);
-//      },
-//   events:{
-//   //  "click span.words": "showOne",
-//    //click media opens up show page
-//  },
-//
-//  function showOne(){
-//    //calls on router to move to one item.
-//    //use navigate?
-//  },
-//
-//   template: _.template($('#OneMediaForIndexView').html()),
-//   render: function(){
-//     var mediaShowTemplate = this.template(this.model.attributes);
-//     this.$el.html(mediaShowTemplate);
-//     return this;
-//   }
-//
-// });
-//
-// /////////////////////////////////
-// var MediaIndex = Backbone.View.extend({
-//
-//
-// });

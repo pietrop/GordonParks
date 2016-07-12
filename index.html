@@ -13,101 +13,97 @@
 <body>
 
 
-<div id="main">
-
-</div>
-
-<script id="timeline" type="text/template">
-  <div class='masthead fade-in'>
-    <div class="back"></div>
-    <div class="logo"><a href="index.html">Vignette</a></div>
-    <div class="sort">Sort</div>
-  </div>
-
-  <div id="timeline" class="fade-in two">
-
-  <div class="intro">
-    <h1>BORDER LAND</h1>
-    <p>We Took A 2,428-Mile Road Trip Along The Mexico Border: Here's What We Saw</p>
-  </div>
-
-<div id="timelineRow" class="">
-  <% _.each(rows, function(r) { %>
+  <div id="main">
 
 
-    <div class="timelineRowsHeading">
-      <h2 class="heading">  <%= r.heading %></h2>
-    </div>
-    <div class="timelineRowDates">
-      <p class="date">  <%= r.date %></p>
-    </div>
-<div class="timelineRowMedia">
-    <% _.each(r.medias, function(m) { %>
-
-        <div class="media" id="mediaId_" alt="">
-          <a href="#/timeline/media/<%= m.id %>">  <img id="mediaId_" class="media" src="<%= m.imgUrl %>" style="border: red;" alt=""></a>
-        </div>
-
-    <% }) %>
-  </div>
-  <% }) %>
-  </div><!-- end timelineRow-->
-  </div><!-- end timeline -->
-</script>
-
-<script id="row" type="text/template">
-
-</script>
-
-  <script id="mediaShow" type="text/template">
-
+  <script id="timeline" type="text/template">
     <div class='masthead fade-in'>
-      <div class="back"><a href="#timeline"><span>←</span> Back</a></div>
-      <div class="logo"><a href="index.html">Vignette</a></div>
+
+      <div class="back"></div>
+      <div class="logo"><a href="index.html">Ida</a></div>
       <div class="sort">Sort</div>
     </div>
 
-    <div class="media-container">
+    <div id="timeline" class="fade-in two">
 
-      <div class="previous">←</div>
-      <div class="next">→</div>
-
-      <div class="image-card small">
-        <img class="media" id="mediaId_" src="<%= imgUrl %>" alt="">
+      <div class="intro">
+        <h1><%= title %></h1>
+        <p><%= description %></p>
       </div>
 
-      <div class="media-card">
-        <div class="media-card-bg">
-        <h3><%= title %></h3>
-        <div class="post-information">
-        <div class="time-stamp">11-07-2016</div>
-        <div class="retweets-count"><span><%= retweetsCount %></span></div>
+
+        <% _.each(rows, function(r) { %>
+            <div id="timelineRow" class="">
+
+          <div class="timelineRowsHeading">
+            <h2 class="heading fade-in three">  <%= r.heading %></h2>
+          </div>
+          <div class="timelineRowDates">
+            <p class="date">  <%= r.date %></p>
+          </div>
+          <div class="timelineRowMedia">
+            <% _.each(r.media, function(m) { %>
+
+              <div class="media" id="mediaId_" alt="">
+                <a href="#/timeline/media/<%= m.id %>">  <img id="mediaId_" class="media" src="<%= m.mediaUrl %>" style="border: red;" alt=""></a>
+              </div>
+              <% }) %>
+            </div>
+                </div><!-- end timelineRow-->
+            <% }) %>
+
+        </div><!-- end timeline -->
+      </script>
+
+      <script id="row" type="text/template">
+
+      </script>
+
+      <script id="mediaShow" type="text/template">
+
+        <div class='masthead'>
+          <div class="back"><a href="#timeline"><span>←</span> Back</a></div>
+            <div class="logo"><a href="index.html">Ida</a></div>
+          <div class="sort">Sort By:</div>
         </div>
-        <div class="description">
-          <p><%= description %></p>
+
+        <div class="media-container">
+          <div class="previous">←</div>
+          <div class="next">→</div>
+
+          <div class="image-card small">
+            <img class="media" id="mediaId_" src="<%= mediaUrl %>" alt="">
+          </div>
+
+          <div class="media-card">
+            <div class="media-card-bg">
+            <h3><%= timestamp %></h3>
+            <div class="post-information">
+            <div class="time-stamp">Retweets</div>
+            <div class="retweets-count"><span><%= retweetsCount %></span></div>
+            </div>
+            <div class="description">
+              <p><%= description %></p>
+            </div>
+            <div class="hashtags"><%= hashtag %></div>
+            </div>
+          </div>
         </div>
-        <div class="hashtags"><%= hashtag %></div>
-        </div>
-      </div>
-    </div>
+      </script>
 
-  </script>
-
-
-
-  <script type="text/javascript" src="vendor/jquery.min.js"></script>
-  <script type="text/javascript"  src="vendor/underscore-min.js"></script>
-  <script type="text/javascript"  src="vendor/backbone-min.js"></script>
-  <script src="./vendor/backbone.touch.js"></script>
+      <script type="text/javascript" src="vendor/jquery.min.js"></script>
+      <script type="text/javascript"  src="vendor/underscore-min.js"></script>
+      <script type="text/javascript"  src="vendor/backbone-min.js"></script>
+      <script src="./vendor/backbone.touch.js"></script>
 
 
-  <script src="./config.js"></script>
-  <script src="./models.js"></script>
-  <script src="./views.js"></script>
-  <script src="./collections.js"></script>
-  <script src="./router.js"></script>
-  <script src="./app.js"></script>
-  <script src="./seeds.js"></script>
+      <script src="./config.js"></script>
+      <script src="./models.js"></script>
+      <script src="./views.js"></script>
+      <script src="./collections.js"></script>
+      <script src="./router.js"></script>
+      <script src="./app.js"></script>
+      <script src="./seeds.js"></script>
 
-</body>
-</html>
+    </body>
+    </html>
