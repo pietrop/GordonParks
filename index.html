@@ -16,6 +16,11 @@
   <div id="main">
 
 
+<script id="timeline" type="text/template">
+  <div class='masthead fade-in'>
+    <div class="back"></div>
+    <div class="logo"><a href="index.html">Vignette</a></div>
+    <div class="sort">Sort</div>
   </div>
 
   <script id="timeline" type="text/template">
@@ -48,7 +53,6 @@
               <div class="media" id="mediaId_" alt="">
                 <a href="#/timeline/media/<%= m.id %>">  <img id="mediaId_" class="media" src="<%= m.mediaUrl %>" style="border: red;" alt=""></a>
               </div>
-
               <% }) %>
             </div>
             <% }) %>
