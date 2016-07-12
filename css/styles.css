@@ -530,6 +530,7 @@ a:hover, a:focus, a:active {
 .post-information input {
 	border: none;
 	background-color: transparent;
+	border-bottom: solid 1px transparent;
 }
 .post-information input:focus {
 	border: none;
@@ -639,6 +640,10 @@ input:focus, textarea:focus {
 }
 
 @media(min-width: 46rem) {
+
+	.intro {
+		padding: 0 25%;
+	}
 
 	/* Heading */
 	.timelineRowsHeading {
