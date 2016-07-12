@@ -31,8 +31,9 @@
         <p><%= description %></p>
       </div>
 
-      <div id="timelineRow" class="">
+
         <% _.each(rows, function(r) { %>
+            <div id="timelineRow" class="">
 
           <div class="timelineRowsHeading">
             <h2 class="heading">  <%= r.heading %></h2>
@@ -48,8 +49,9 @@
               </div>
               <% }) %>
             </div>
+                </div><!-- end timelineRow-->
             <% }) %>
-          </div><!-- end timelineRow-->
+
         </div><!-- end timeline -->
       </script>
 
