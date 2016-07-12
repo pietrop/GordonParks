@@ -203,6 +203,11 @@ a:hover, a:focus, a:active {
     -webkit-animation-delay: 1s;
     animation-delay: 1s;
 }
+/*.fade-in .logo a:before, .fade-in .logo a:after {
+	animation: none;
+	-webkit-animation: none;
+	transform: translate3d(0, 0, 0);
+}*/
 .logo:hover {
 	opacity: .3;
 }
@@ -303,24 +308,26 @@ a:hover, a:focus, a:active {
 }
 .timelineRowMedia .media img {
 	position: absolute;
-	top: 25%;
+	top: 22%;
 	left: 0;
 	width: auto;
 	height: auto;
-	transform: scale3d(1.75, 1.75, 1);
+	transform: scale3d(1.80, 1.80, 1);
 }
 .timelineRowMedia > .media:hover {
-	transform: scale3d(1.75, 1.75, 1);
+	transform: scale3d(1.80, 1.80, 1);
 	z-index: 2000;
 	box-shadow: 0 0 20px 0px rgba(0,0,0,.1), 0 0 0px .5px rgba(255,255,255,.3);
 }
 
 #timeline > div .timelineRowsHeading, #timeline > div .timelineRowDates {
 	opacity: 0;
+	display: none;
 }
 #timeline > div:nth-child(2n + 2) .timelineRowsHeading,
 #timeline > div:nth-child(2n + 2) .timelineRowDates {
 	opacity: 1;
+	display: block;
 }
 
 
@@ -804,6 +811,13 @@ input:focus, textarea:focus {
 .fade-in.three {
     -webkit-animation-duration: .4s;
     animation-duration: .4s;
-    -webkit-animation-delay: .77s;
-    animation-delay: .77s
+    -webkit-animation-delay: .99s;
+    animation-delay: .99s
+}
+
+.fade-in.four {
+    -webkit-animation-duration: .4s;
+    animation-duration: .4s;
+    -webkit-animation-delay: 1.22s;
+    animation-delay: 1.22s
 }
