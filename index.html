@@ -15,18 +15,23 @@
 
   <div id="main">
 
+
   </div>
-
-
 
   <script id="timeline" type="text/template">
     <div class='masthead fade-in'>
+
       <div class="back"></div>
-      <div class="logo"><a href="index.html"><%= title %></a></div>
+      <div class="logo"><a href="index.html">Some awesome app name</a></div>
       <div class="sort">Sort By:</div>
     </div>
 
     <div id="timeline" class="fade-in two">
+
+      <div class="intro">
+        <h1><%= title %></h1>
+        <p><%= description %></p>
+      </div>
 
       <div id="timelineRow" class="">
         <% _.each(rows, function(r) { %>
@@ -38,10 +43,10 @@
             <p class="date">  <%= r.date %></p>
           </div>
           <div class="timelineRowMedia">
-            <% _.each(r.medias, function(m) { %>
+            <% _.each(r.media, function(m) { %>
 
               <div class="media" id="mediaId_" alt="">
-                <a href="#/timeline/media/<%= m.id %>">  <img id="mediaId_" class="media" src="<%= m.imgUrl %>" style="border: red;" alt=""></a>
+                <a href="#/timeline/media/<%= m.id %>">  <img id="mediaId_" class="media" src="<%= m.mediaUrl %>" style="border: red;" alt=""></a>
               </div>
 
               <% }) %>
@@ -59,29 +64,34 @@
 
         <div class='masthead fade-in'>
           <div class="back"><a href="#timeline">< </a></div>
-          <div class="logo"><%= timelineTitle %></div>
+            <div class="logo"><a href="index.html">Some awesome app name</a></div>
           <div class="sort">Sort By:</div>
         </div>
 
         <div class="media-container">
-          <div class="image-card">
-            <img class="media" id="mediaId_" src="<%= imgUrl %>" alt="">
+          <div class="previous">←</div>
+          <div class="next">→</div>
+
+          <div class="image-card small">
+            <img class="media" id="mediaId_" src="<%= mediaUrl %>" alt="">
           </div>
 
-          <div class="media-card  fade-in two">
-            <h3><%= title %></h3>
+          <div class="media-card">
+            <div class="media-card-bg">
+            <h3><%= timestamp %></h3>
             <div class="post-information">
-              <div class="time-stamp">11-07-2016</div>
-              <div class="retweets-count"><span><%= retweetsCount %></span></div>
+            <div class="time-stamp">11-07-2016</div>
+            <div class="retweets-count"><span><%= retweetsCount %></span></div>
             </div>
             <div class="description">
               <p><%= description %></p>
             </div>
             <div class="hashtags"><%= hashtag %></div>
-            <div class="bg"></div>
+            </div>
           </div>
         </div>
       </script>
+
 
 
 

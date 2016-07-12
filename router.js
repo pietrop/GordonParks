@@ -1,6 +1,6 @@
 var Router =Backbone.Router.extend({
   routes: {
-    "": "home",
+    "": "timeline",
     "timeline": "timeline",
     // "timeline/:tid": "showTimeline",
     // "timeline/:tid/media/:id":"showMedia"
@@ -25,8 +25,8 @@ var Router =Backbone.Router.extend({
     // console.log("timeline"+1)
       console.log("timeline id ")
       //TODO:find from collection
-      var newDefaultTimeline = new Timeline();
-      var newDefaultTimelineView = new TimelineView({model: newDefaultTimeline})
+      // var newDefaultTimeline = new Timeline();
+      // var newDefaultTimelineView = new TimelineView({model: newDefaultTimeline})
       $("#main").html(newDefaultTimelineView.render().$el);
   },
 
