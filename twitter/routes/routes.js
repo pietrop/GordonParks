@@ -14,8 +14,9 @@ var filterTweets = function(tweets, retweetThreshold) {
     var tweet = tweets.statuses[i];
     if (tweet.entities.media) {
       media.push({
-         "id": tweet.entities.media[0].id_str,
-         "title": "Media Title"
+         "id": i,
+         "twitter_id": tweet.entities.media[0].id_str,
+         "title": "Media Title",
          "hashtag": tweet.entities.hashtags.map(function(tag) {return tag.text}),
          "timestamp": tweet.created_at,
          "retweetsCount": tweet.retweet_count,
@@ -35,20 +36,19 @@ var groupTweets = function(tweets) {
   var groups = {};
   tweets.map(function(tweet) {
     var ts = new Date(Date.parse(tweet.timestamp));
-    var key = ts.getYear() + '-' + ts.getMonth() + '-' + ts.getDay() + '-' + ts.getHours(); // + '-' + ts.getMinutes();
+    var key = ts.getYear() + '-' + ts.getMonth() + '-' + ts.getDay() + '-' + ts.getHours() + '-' + ts.getMinutes() + '-' + (ts.getSeconds() % 5);
     if (groups[key] === undefined) {
       groups[key] = [];
     }
     groups[key].push(tweet);
   });
-  //Math.max(timestamps) - Math.min(timestamps)
   return groups;
 };
 
 var toJson = function(groupedTweets) {
   var rows = [];
   for (var key in groupedTweets) {
-    rows.push({"heading": key, "media": groupedTweets[key]});
+    rows.push({"heading": groupedTweets[key][0]["timestamp"], "media": groupedTweets[key]});
   }
   return rows;
 };
@@ -58,14 +58,18 @@ var appRouter = function(app) {
     if (req.query.hashtag) {
       var retweetThreshold = (req.query.retweet_threshold ? parseInt(req.query.retweet_threshold) : 0);
       var tweetsToSearch = (req.query.tweets_to_search ? parseInt(req.query.tweets_to_search) : 100);
-      client.get('search/tweets', {q: '%23' + req.query.hashtag, result_type: 'popular', count: '100'}, 
+      var allTweets = [];
+      client.get('search/tweets', {q: '%23' + req.query.hashtag, result_type: 'recent', count: '100'}, 
         function(error, tweets, response) {
+          //console.log(tweets);
           var filteredTweets = filterTweets(tweets, retweetThreshold);
           var groupedTweets = groupTweets(filteredTweets);
           var json = toJson(groupedTweets);
-          res.send({"rows": json, "count": tweetsToSearch});
+          //console.log({"rows": json, "count": 100});
+          res.json({"rows": json, "count": tweetsToSearch});
         });
     }
+      //console.log({"finalAllTweets": allTweets});
   });
 };
  
