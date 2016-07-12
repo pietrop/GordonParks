@@ -21,10 +21,15 @@
   <div class='masthead fade-in'>
     <div class="back"></div>
     <div class="logo"><a href="index.html"><%= title %></a></div>
-    <div class="sort">Sort By:</div>
+    <div class="sort">Sort</div>
   </div>
 
   <div id="timeline" class="fade-in two">
+
+  <div class="intro">
+    <h1>BORDER LAND</h1>
+    <p>We Took A 2,428-Mile Road Trip Along The Mexico Border: Here's What We Saw</p>
+  </div>
 
 <div id="timelineRow" class="">
   <% _.each(rows, function(r) { %>
@@ -57,18 +62,22 @@
   <script id="mediaShow" type="text/template">
 
     <div class='masthead fade-in'>
-      <div class="back"><a href="#timeline">< </a></div>
-      <div class="logo"><%= timelineTitle %></div>
-      <div class="sort">Sort By:</div>
+      <div class="back"><a href="#timeline">← Back</a></div>
+      <div class="logo"><a href="index.html"><%= timelineTitle %></a></div>
+      <div class="sort">Sort</div>
     </div>
 
     <div class="media-container">
-      <div class="image-card">
+
+      <div class="previous">←</div>
+      <div class="next">→</div>
+
+      <div class="image-card small">
         <img class="media" id="mediaId_" src="<%= imgUrl %>" alt="">
       </div>
 
-
-      <div class="media-card  fade-in two">
+      <div class="media-card">
+        <div class="media-card-bg">
         <h3><%= title %></h3>
         <div class="post-information">
         <div class="time-stamp">11-07-2016</div>
@@ -78,14 +87,9 @@
           <p><%= description %></p>
         </div>
         <div class="hashtags"><%= hashtag %></div>
-          <div class="bg"></div>
-
+        </div>
       </div>
     </div>
-
-
-
-
 
   </script>
 
