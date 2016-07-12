@@ -504,7 +504,12 @@ a:hover, a:focus, a:active {
 	padding: 2.3rem 5% 2.3rem 5%;
 	background-color: #EEE;
 }
-.post-information input {
+.post-information .section-label {
+	font-size: .9rem;
+	margin-bottom: 1rem;
+	color: #333;
+}
+.post-information input.headline {
 	font-family: 'MillerBanner';
 	text-transform: capitalize;
 	font-size: 3.4rem;
@@ -513,22 +518,20 @@ a:hover, a:focus, a:active {
 	margin: 0 0 1rem 0;
 	color: #333;
 }
-.post-information textarea {
+.post-information input.description {
 	font-family: 'Miller-Text';
 	font-size: 1rem;
 	line-height: 1.5;
 	text-align: center;
-	margin: 0 0 6rem 0;
+	margin: 0 0 1rem 0;
 	color: #333;
 	position: relative;
 }
-.post-information input,
-.post-information textarea {
+.post-information input {
 	border: none;
 	background-color: transparent;
 }
-.post-information input:focus,
-.post-information textarea:focus {
+.post-information input:focus {
 	border: none;
 	border-bottom: solid 1px #DDD;
 }
