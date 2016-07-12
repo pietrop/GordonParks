@@ -147,7 +147,7 @@ a:link, a:visited {
 .intro h1 {
 	font-family: 'MillerBanner';
 	text-transform: capitalize;
-	font-size: 3rem;
+	font-size: 3.4rem;
 	line-height: 1;
 	text-align: center;
 	margin: 0 0 1rem 0;
@@ -158,8 +158,19 @@ a:link, a:visited {
 	font-size: 1rem;
 	line-height: 1.5;
 	text-align: center;
-	margin: 0 0 3rem 0;
+	margin: 0 0 6rem 0;
 	color: #333;
+	position: relative;
+}
+.intro p:after {
+	content: '';
+	position: absolute;
+	width: 2.6rem;
+	height: 1px;
+	left: 50%;
+	bottom: -3rem;
+	margin-left: -1.3rem;
+	background-color: #DDD;
 }
 
 
