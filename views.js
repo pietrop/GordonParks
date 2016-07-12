@@ -19,7 +19,7 @@ var MediaShowView = Backbone.View.extend({
 // //////////////////////////////
 var TimelineView = Backbone.View.extend({
   tagName: 'div',
-  className: 'container-fluid',
+  // className: 'container-fluid',
   // events:{
     // "click .media": "showMedia"
   // },
@@ -41,42 +41,3 @@ var TimelineView = Backbone.View.extend({
   }
 
 })
-
-
-
-
-
-
-
-// var OneMediaForIndexView = Backbone.View.extend({
-//   tagName: 'div',
-//   className: 'mediaCard',
-//   id: "media-n",//+this.model.id+"",
-//   initialize: function() {
-//       //connect to changes in the model to update the view
-//        this.listenTo(this.model, "change", this.render);
-//      },
-//   events:{
-//   //  "click span.words": "showOne",
-//    //click media opens up show page
-//  },
-//
-//  function showOne(){
-//    //calls on router to move to one item.
-//    //use navigate?
-//  },
-//
-//   template: _.template($('#OneMediaForIndexView').html()),
-//   render: function(){
-//     var mediaShowTemplate = this.template(this.model.attributes);
-//     this.$el.html(mediaShowTemplate);
-//     return this;
-//   }
-//
-// });
-//
-// /////////////////////////////////
-// var MediaIndex = Backbone.View.extend({
-//
-//
-// });

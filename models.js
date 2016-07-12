@@ -1,19 +1,20 @@
 var  Media = Backbone.Model.extend({
 
-    defaults: {
-      timelineTitle: "Timeline title",
-      title: "Media Title",
-      hashtag:"#SomethingTrendy",
-      timeStamp: "11-07-2016",
-      retweetsCount:"347",
-      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      sourceUrl:"www.vox.com",
-      sourceName: "Vox",
-      imgUrl: "./images/juarez1.jpg",
-      videoUrl:"",
-      gifUrl:"",
-      mediaType: "img"
-    },
+    // defaults: {
+      // id: 1,
+      // timelineTitle: "Timeline title",
+      // title: "Media Title",
+      // hashtag:"#SomethingTrendy",
+      // timeStamp: "11-07-2016",
+      // retweetsCount:"347",
+      // description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      // sourceUrl:"www.vox.com",
+      // sourceName: "Vox",
+      // imgUrl: "./images/juarez1.jpg",
+      // videoUrl:"",
+      // gifUrl:"",
+      // mediaType: "img"
+    // },
     initialize: function(){
 
       this.on("invalid", function(model, error){

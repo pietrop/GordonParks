@@ -2,7 +2,7 @@ var Router =Backbone.Router.extend({
   routes: {
     "": "home",
     "timeline": "timeline",
-    // "timeline/:tid": "timeline",
+    // "timeline/:tid": "showTimeline",
     // "timeline/:tid/media/:id":"showMedia"
     "timeline/media/:id":"showMedia"
   },
@@ -16,10 +16,15 @@ var Router =Backbone.Router.extend({
   //   console.log("timeline"+1)
   //     console.log("timeline no id")
   // },
+  // timeline:  function (){
+  //   $("#main").html("Timelines");
+  //   console.log("timeline")
+  // },
 
   timeline: function(){
     // console.log("timeline"+1)
-      console.log("timeline no id")
+      console.log("timeline id ")
+      //TODO:find from collection
       var newDefaultTimeline = new Timeline();
       var newDefaultTimelineView = new TimelineView({model: newDefaultTimeline})
       $("#main").html(newDefaultTimelineView.render().$el);
