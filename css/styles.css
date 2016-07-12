@@ -52,10 +52,6 @@
 }
 
 
-
-
-
-
 @font-face {
 	font-family: "GT-Cinetype-Trial-Bold";
 	src: url(../css/fonts/GT-Cinetype-Trial-Bold.eot);
@@ -280,6 +276,7 @@ a:hover, a:focus, a:active {
 }
 .timelineRowsHeading, .timelineRowDates {
 	text-align: center;
+	z-index: 10000;
 }
 
 /* Media */
@@ -291,8 +288,8 @@ a:hover, a:focus, a:active {
 	justify-content: center;
 }
 .timelineRowMedia .media {
-	height: 4rem;
-	max-width: 4rem;
+	height: 6rem;
+	max-width: 6rem;
 
 	flex: 1 5rem;
 
@@ -344,6 +341,14 @@ a:hover, a:focus, a:active {
 }
 
 /* Image Card */
+.image-card {
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none;   /* Chrome/Safari/Opera */
+	-khtml-user-select: none;    /* Konqueror */
+	-moz-user-select: none;      /* Firefox */
+	-ms-user-select: none;       /* Internet Explorer/Edge */
+	user-select: none; 
+}
 .image-card img {
 	width: 100%;
 }
@@ -656,7 +661,7 @@ input:focus, textarea:focus {
 	.timelineRowsHeading {
 		position: absolute;
 		left: 0;
-		top: 1.25rem;
+		top: 2.5rem;
 		text-align: left;
 	}
 	.timelineRowDates {
