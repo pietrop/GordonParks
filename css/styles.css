@@ -21,7 +21,7 @@
 
 ::-webkit-scrollbar-thumb {
     border-radius: .9rem;
-    background-color: #a7a9ab;
+    background-color: #333;
     border: solid 4px #fefefe
 }
 
@@ -56,6 +56,13 @@
 	font-family: "GT-Cinetype-Trial-Bold";
 	src: url(../css/fonts/GT-Cinetype-Trial-Bold.eot);
 	src: url(../css/fonts/GT-Cinetype-Trial-Bold?#iefix) format("embedded-opentype"), url(../css/fonts/GT-Cinetype-Trial-Bold.woff) format("woff"), url(../css/fonts/GT-Cinetype-Trial-Bold.ttf) format("truetype");
+	font-weight: 400;
+	font-style: normal
+}
+@font-face {
+	font-family: "GT-Cinetype-Trial";
+	src: url(../css/fonts/GT-Cinetype-Trial.eot);
+	src: url(../css/fonts/GT-Cinetype-Trial?#iefix) format("embedded-opentype"), url(../css/fonts/GT-Cinetype-Trial.woff) format("woff"), url(../css/fonts/GT-Cinetype-Trial.ttf) format("truetype");
 	font-weight: 400;
 	font-style: normal
 }
@@ -132,7 +139,6 @@ a:hover, a:focus, a:active {
 	position: fixed;
 	width: 100%;
 	z-index: 15000;
-
 	display: -ms-flexbox;
 	display: flex;
 }
@@ -274,12 +280,17 @@ a:hover, a:focus, a:active {
 
 
 .intro {
-	padding: 0 5%;
+	padding: 6rem 5% 4rem 5%;
+	margin-bottom: 4rem;
+	background:url(
+		data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAAI0lEQVQYV2NkIAIwEqGGgYaKamtr/zc3N6PYQEPrsPmWKOsAm8QEChhshVIAAAAASUVORK5CYII=
+    ) repeat;
+    background-size: 5px;
 }
 .intro h1 {
-	font-family: 'MillerBanner';
+	font-family: 'GT-Cinetype-Trial-Bold';
 	text-transform: capitalize;
-	font-size: 3.4rem;
+	font-size: 6vmax;
 	line-height: 1;
 	text-align: center;
 	margin: 0 0 1rem 0;
@@ -287,10 +298,11 @@ a:hover, a:focus, a:active {
 }
 .intro p {
 	font-family: 'Miller-Text';
-	font-size: 1rem;
+	font-size: 1.05rem;
 	line-height: 1.5;
 	text-align: center;
-	margin: 0 0 6rem 0;
+	letter-spacing: .05px;
+	margin: 0 0 2rem 0;
 	color: #333;
 	position: relative;
 }
@@ -308,7 +320,7 @@ a:hover, a:focus, a:active {
 
 #timeline {
 	padding: 2.5rem 0;
-	padding-top: 12rem;
+	padding-top: 8rem;
 }
 
 #timelineRow {
@@ -323,8 +335,15 @@ a:hover, a:focus, a:active {
 	text-transform: uppercase;
 	position: relative;
 	color: #e4b17d;
-	margin-top: 2.2rem;
-	margin-bottom: .2rem;
+	/*margin-top: 2.2rem;
+	margin-bottom: .2rem;*/
+/*	padding: .6rem 1rem;
+	margin-top: -2rem;
+
+	background:url(
+		data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAAJElEQVQYV2NkIAIwEqGGgYaKJk6c+D8/Px/FBhpah823RFkHAJy0BApa8C4RAAAAAElFTkSuQmCC
+    ) repeat;
+    background-size: 4px;*/
 }
 .date {
 	margin-top: 0;
@@ -433,7 +452,6 @@ a:hover, a:focus, a:active {
 .media-card-bg {
 	padding: 5%;
 	height: 100%;
-	mix-blend-mode: normal;
 	background-color: #ffab70;
 	mix-blend-mode: lighten;
 	background-color: rgba(105, 175, 162, 0.79);
@@ -470,6 +488,8 @@ a:hover, a:focus, a:active {
 	    flex: 2 50%;
 	text-align: center;
 	letter-spacing: 1px;
+/*	max-width: 4rem;
+	word-wrap: ellipse;*/
 }
 .media-card a:link, 
 .media-card a:visited,
@@ -731,7 +751,7 @@ input:focus, textarea:focus {
 	}
 	#timeline {
 		padding: 2.5rem 5%;
-		padding-top: 12rem;
+		padding-top: 11rem;
 	}
 	.media-container {
 	}
@@ -743,7 +763,7 @@ input:focus, textarea:focus {
 @media(min-width: 46rem) {
 
 	.intro {
-		padding: 0 25%;
+		padding: 6rem 5% 4rem 5%;
 	}
 
 	/* Heading */
