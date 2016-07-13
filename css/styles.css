@@ -126,7 +126,7 @@ a:hover, a:focus, a:active {
 	color: #c3996e;
 }
 .masthead {
-	padding: 2.5rem 5%;
+	padding: 1.5rem 5%;
 	text-align: center;
 	background-color: #FFF;
 	position: fixed;
@@ -210,36 +210,53 @@ a:hover, a:focus, a:active {
 	-webkit-animation: none;
 	transform: translate3d(0, 0, 0);
 }*/
-.logo:hover a:link, .logo:hover a:visited {
+.logo > div {
+	display: inline-block;
+	widows: auto;
+}
+.logo > div:hover a:link, .logo > div:hover a:visited {
 	color: #e4b17d;
 }
-.logo:hover a:before {
+.logo > div:hover a:before {
 	border: solid #e4b17d 2px;
 }
-.logo:hover a:after {
+.logo > div:hover a:after {
 	border: solid #e4b17d 2px;
 }
 .sort {
-	font-family: 'GT-Cinetype-Trial-Bold';
-	-webkit-font-smoothing: antialiased;
-	font-size: 1rem;
 	text-align: right;
 	color: #999;
 }
-.sort:hover {
-/*	opacity: .8;*/
+.sort.disabled {
+	opacity: .3;
+	pointer-events: none;
+}
+.sort > div {
+	display: inline-block;
+	padding: .5rem .8rem .6rem .8rem;
+	margin: -.5rem -.8rem -.6rem -.8rem;
+	transition: all 0.2s ease;
+	cursor: pointer;
+	border-radius: .1rem;
+}
+.sort > div:hover {
+	background-color: #FBFBFB;
 }
 .sort .sort-text {
 	display: inline-block;
 	position: relative;
-	margin-right: 1.4rem;
+	margin-right: 1.2rem;
+	text-transform: uppercase;
+	font-family: 'GT-Cinetype-Trial-Bold';
+	-webkit-font-smoothing: antialiased;
+	font-size: .9rem;
 }
 .sort .sort-text:after {
 	display: inline-block;
 	content: '';
 	position: absolute;
 	top: 40%;
-	right: -1.4rem;
+	right: -1.2rem;
 	border: solid transparent;
 	content: " ";
 	height: 0;
@@ -252,7 +269,7 @@ a:hover, a:focus, a:active {
 	margin-left: -5px;
 }
 .sort svg {
-	margin-bottom: -.25rem;
+	margin-bottom: -.35rem;
 }
 
 
@@ -454,8 +471,16 @@ a:hover, a:focus, a:active {
 	text-align: center;
 	letter-spacing: 1px;
 }
-.media-card .time-stamp a:link, .media-card .time-stamp a:visited {
+.media-card a:link, 
+.media-card a:visited,
+.media-card a:link, 
+.media-card a:visited {
 	color: #FFF;
+}
+.media-card a:hover, 
+.media-card a:focus, 
+.media-card a:active {
+	color: rgba(255, 220, 220, .9);
 }
 .media-card .retweets-count {
 	font-family: 'GT-Cinetype-Trial-Bold';
@@ -490,6 +515,8 @@ a:hover, a:focus, a:active {
 }
 .media-card .source a:hover, .media-card .source a:focus, .media-card .source a:active {
 	margin-left: .2rem;
+	color: rgba(255, 220, 220, .9);
+	border-bottom: solid rgba(255, 220, 220, .9) 1px;
 }
 .media-card .description:before {
 	content: '';
@@ -699,6 +726,9 @@ input:focus, textarea:focus {
 }
 
 @media(min-width: 28rem) {
+	.masthead {
+		padding: 2.5rem 5%;
+	}
 	#timeline {
 		padding: 2.5rem 5%;
 		padding-top: 12rem;
