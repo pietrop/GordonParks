@@ -352,6 +352,15 @@ a:hover, a:focus, a:active {
 	text-align: center;
 	z-index: 10000;
 }
+.heading:after {
+	content: '';
+	position: absolute;
+	width: 1.5rem;
+	height: 1px;
+	left: 0;
+	top: .5rem;
+	background-color: #e4b17d;
+}
 
 /* Media */
 .timelineRowMedia {
@@ -363,8 +372,8 @@ a:hover, a:focus, a:active {
 	    justify-content: center;
 }
 .timelineRowMedia .media {
-	height: 9rem;
-	max-width: 9rem;
+	height: 12vmax;
+	max-width: 12vmax;
 
 	-ms-flex: 1 5rem;
 
@@ -401,14 +410,11 @@ a:hover, a:focus, a:active {
 }
 
 #timeline > div .timelineRowsHeading, #timeline > div .timelineRowDates {
-	opacity: 0;
-	display: none;
-}
-#timeline > div:nth-child(2n + 2) .timelineRowsHeading,
-#timeline > div:nth-child(2n + 2) .timelineRowDates {
 	opacity: 1;
 	display: block;
+	margin-top: 1rem;
 }
+
 
 
 
@@ -765,7 +771,15 @@ input:focus, textarea:focus {
 	.intro {
 		padding: 6rem 5% 4rem 5%;
 	}
-
+	#timeline > div .timelineRowsHeading, #timeline > div .timelineRowDates {
+		opacity: 0;
+		display: none;
+	}
+	#timeline > div:nth-child(2n + 2) .timelineRowsHeading,
+	#timeline > div:nth-child(2n + 2) .timelineRowDates {
+		opacity: 1;
+		display: block;
+	}
 	/* Heading */
 	.timelineRowsHeading {
 		position: absolute;
