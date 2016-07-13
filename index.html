@@ -134,7 +134,7 @@
             <h3><%= timestamp.split("+")[0] %></h3>
             <div class="post-information">
             <div class="time-stamp">  <a href='http://twitter.com/<%= username %>'  target='_blank'>@<%= username %></a></div>
-            <div class="retweets-count"><span><a href='http://twitter.com/<%= username %>'  target='_blank'>RT’s – <%= retweetsCount %></a></span></div>
+            <div class="retweets-count"><span><a href='<%= tweetUrl %>'  target='_blank'>RT’s – <%= retweetsCount %></a></span></div>
             </div>
             <div class="description">
               <p><%= description %></p>
