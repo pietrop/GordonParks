@@ -73,6 +73,17 @@
 	font-weight: 400;
 	font-style: normal
 }
+@font-face {
+  font-family: 'Graphik';
+  src: url('../css/fonts/Graphik-Light-Web.eot');
+  src: url('../css/fonts/Graphik-Light-Web.eot?#iefix') format('embedded-opentype'),
+       url('../css/fonts/Graphik-Light-Web.woff2') format('woff2'),
+       url('../css/fonts/Graphik-Light-Web.woff') format('woff');
+  font-weight:  300;
+  font-style:   normal;
+  font-stretch: normal;
+}
+
 html {
 	height: 100%;	
 }
@@ -123,17 +134,19 @@ a:hover, a:focus, a:active {
 	z-index: 15000;
 
 	display: -ms-flexbox;
-	display: -webkit-flex;
 	display: flex;
 }
 .masthead > *:nth-of-type(1) {
-	flex: 3 20%;
+	-ms-flex: 3 20%;
+	    flex: 3 20%;
 }
 .masthead > *:nth-of-type(2) {
-	flex: 3 40%;
+	-ms-flex: 3 40%;
+	    flex: 3 40%;
 }
 .masthead > *:nth-of-type(3) {
-	flex: 3 20%;
+	-ms-flex: 3 20%;
+	    flex: 3 20%;
 }
 
 .back {
@@ -170,14 +183,9 @@ a:hover, a:focus, a:active {
 	border: solid #333 2px;
 	top: 0;
 	transform: translate3d(0, 1rem, 0);
-
-    -webkit-animation: topToBottom ease 1;
     animation: topToBottom ease 1;
-    -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
-    -webkit-animation-duration: .6s;
     animation-duration: .6s;
-    -webkit-animation-delay: 1s;
     animation-delay: 1s;
 }
 .logo a:after {
@@ -189,14 +197,9 @@ a:hover, a:focus, a:active {
 	border: solid #333 2px;
 	bottom: 0;
 	transform: translate3d(0, -1rem, 0);
-
-    -webkit-animation: bottomToTop ease 1;
     animation: bottomToTop ease 1;
-    -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
-    -webkit-animation-duration: .6s;
     animation-duration: .6s;
-    -webkit-animation-delay: 1s;
     animation-delay: 1s;
 }
 /*.fade-in .logo a:before, .fade-in .logo a:after {
@@ -264,11 +267,11 @@ a:hover, a:focus, a:active {
 .heading {
 	font-family: 'GT-Cinetype-Trial-Bold';
 	-webkit-font-smoothing: antialiased;
-	font-size: .8rem;
+	font-size: .9rem;
 	text-transform: uppercase;
 	position: relative;
 	color: #e4b17d;
-	margin-top: 2rem;
+	margin-top: 2.2rem;
 	margin-bottom: .2rem;
 }
 .date {
@@ -282,20 +285,22 @@ a:hover, a:focus, a:active {
 /* Media */
 .timelineRowMedia {
 	display: -ms-flexbox;
-	display: -webkit-flex;
 	display: flex;
-	align-items: center;
-	justify-content: center;
+	-ms-flex-align: center;
+	    align-items: center;
+	-ms-flex-pack: center;
+	    justify-content: center;
 }
 .timelineRowMedia .media {
 	height: 9rem;
 	max-width: 9rem;
 
-	flex: 1 5rem;
+	-ms-flex: 1 5rem;
+
+	    flex: 1 5rem;
 
 	-webkit-touch-callout: none; /* iOS Safari */
-	-webkit-user-select: none;   /* Chrome/Safari/Opera */
-	-khtml-user-select: none;    /* Konqueror */
+	-webkit-user-select: none;   /* Chrome/Safari/Opera */    /* Konqueror */
 	-moz-user-select: none;      /* Firefox */
 	-ms-user-select: none;       /* Internet Explorer/Edge */
 	user-select: none; 
@@ -350,8 +355,7 @@ a:hover, a:focus, a:active {
 /* Image Card */
 .image-card {
 	-webkit-touch-callout: none; /* iOS Safari */
-	-webkit-user-select: none;   /* Chrome/Safari/Opera */
-	-khtml-user-select: none;    /* Konqueror */
+	-webkit-user-select: none;   /* Chrome/Safari/Opera */    /* Konqueror */
 	-moz-user-select: none;      /* Firefox */
 	-ms-user-select: none;       /* Internet Explorer/Edge */
 	user-select: none; 
@@ -392,7 +396,6 @@ a:hover, a:focus, a:active {
 .media-card .post-information {
 	border: solid 1px #FFF;
 	display: -ms-flexbox;
-	display: -webkit-flex;
 	display: flex;
 	padding: .8rem;
 	position: relative;
@@ -411,7 +414,8 @@ a:hover, a:focus, a:active {
 	font-family: 'GT-Cinetype-Trial-Bold';
 	-webkit-font-smoothing: antialiased;
 	font-size: .9rem;
-	flex: 2 50%;
+	-ms-flex: 2 50%;
+	    flex: 2 50%;
 	text-align: center;
 	letter-spacing: 1px;
 }
@@ -422,7 +426,8 @@ a:hover, a:focus, a:active {
 	font-family: 'GT-Cinetype-Trial-Bold';
 	-webkit-font-smoothing: antialiased;
 	font-size: .9rem;
-	flex: 2 50%;
+	-ms-flex: 2 50%;
+	    flex: 2 50%;
 	text-align: center;
 	letter-spacing: 1px;
 }
@@ -476,35 +481,34 @@ a:hover, a:focus, a:active {
 	transition: all 0.1s ease;
 	cursor: pointer;
 	-webkit-touch-callout: none; /* iOS Safari */
-	-webkit-user-select: none;   /* Chrome/Safari/Opera */
-	-khtml-user-select: none;    /* Konqueror */
+	-webkit-user-select: none;   /* Chrome/Safari/Opera */    /* Konqueror */
 	-moz-user-select: none;      /* Firefox */
 	-ms-user-select: none;       /* Internet Explorer/Edge */
 	user-select: none; 
-}
-.previous:hover {
-	background-color: rgba(240,240,240,.8);
-	padding-left: .8rem;
-	padding-right: 1.2rem;
-}
-.next:hover {
-	background-color: rgba(240,240,240,.8);
-	padding-right: .8rem;
-	padding-left: 1.2rem;
 }
 .previous {
 	left: 0;
 	top: 50%;
 	color: #333;
-	padding: 1rem 1rem 1rem 1.2rem;
-	background-color: rgba(240,240,240,.2);
+	padding: 1rem 1.2rem 1rem 1.2rem;
+	background-color: rgba(240,240,240,.25);
 }
 .next {
 	right: 0;
 	top: 50%;
 	color: #333;
 	padding: 1rem 1.2rem 1rem 1.2rem;
-	background-color: rgba(240,240,240,.2);
+	background-color: rgba(240,240,240,.25);
+}
+.previous:hover {
+	background-color: rgba(240,240,240,.8);
+	padding-left: 1rem;
+	padding-right: 1.4rem;
+}
+.next:hover {
+	background-color: rgba(240,240,240,.8);
+	padding-right: 1rem;
+	padding-left: 1.4rem;
 }
 
 /* Curration Pages */
@@ -700,9 +704,9 @@ input:focus, textarea:focus {
 	.heading:after {
 		content: '';
 		position: absolute;
-		width: 5rem;
+		width: 4rem;
 		height: 1px;
-		left: 9rem;
+		left: 10rem;
 		top: .5rem;
 		background-color: #e4b17d;
 	}
@@ -746,15 +750,6 @@ input:focus, textarea:focus {
 
 
 /* Animations */
-@-webkit-keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
 
 @keyframes fadeIn {
     from {
@@ -767,15 +762,6 @@ input:focus, textarea:focus {
 }
 
 /* Animations */
-@-webkit-keyframes topToBottom {
-    from {
-        transform: translate3d(0, 1rem, 0);
-    }
-
-    to {
-    	transform: translate3d(0, 0, 0);
-    }
-}
 
 @keyframes topToBottom {
     from {
@@ -799,14 +785,6 @@ input:focus, textarea:focus {
 }*/
 
 /* Animations */
-@-webkit-keyframes bottomToTop {
-    from {
-        transform: translate3d(0, -1rem, 0);
-    }
-    to {
-        transform: translate3d(0, 0, 0);
-    }
-}
 
 @keyframes bottomToTop {
     from {
@@ -819,33 +797,23 @@ input:focus, textarea:focus {
 
 .fade-in {
     opacity: 0;
-    -webkit-animation: fadeIn ease-in-out 1;
     animation: fadeIn ease-in-out 1;
-    -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
-    -webkit-animation-duration: .4s;
     animation-duration: .4s;
-    -webkit-animation-delay: .33s;
     animation-delay: .33s
 }
 
 .fade-in.two {
-    -webkit-animation-duration: .4s;
     animation-duration: .4s;
-    -webkit-animation-delay: .66s;
     animation-delay: .66s
 }
 
 .fade-in.three {
-    -webkit-animation-duration: .4s;
     animation-duration: .4s;
-    -webkit-animation-delay: .99s;
     animation-delay: .99s
 }
 
 .fade-in.four {
-    -webkit-animation-duration: .4s;
     animation-duration: .4s;
-    -webkit-animation-delay: 1.22s;
     animation-delay: 1.22s
 }
