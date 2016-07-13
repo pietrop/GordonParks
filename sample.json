@@ -12,7 +12,7 @@
       "date": "12-07-2016",
       "medias":
       [
-        {
+        {"id":1,
           "title": "Media Title",
           "hashtag":"#SomethingTrendy",
           "timeStamp": "11-07-2016",
