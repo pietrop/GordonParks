@@ -372,8 +372,8 @@ a:hover, a:focus, a:active {
 	    justify-content: center;
 }
 .timelineRowMedia .media {
-	height: 12vmax;
-	max-width: 12vmax;
+	height: 13vmax;
+	max-width: 13vmax;
 
 	-ms-flex: 1 5rem;
 
