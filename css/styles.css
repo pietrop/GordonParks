@@ -115,7 +115,7 @@ button {
 	color: #FFF;
 	border: none;
 	cursor: pointer;
-	transition: all .2s ease;
+	transition: color .2s ease, background-color .2s ease;
 }
 button:hover, button:focus {
 	background-color: #333;
@@ -127,7 +127,7 @@ button:hover, button:focus {
 a:link, a:visited {
 	color: #e4b17d;
 	text-decoration: none;
-	transition: all .2s ease;
+	transition: color .2s ease;
 }
 a:hover, a:focus, a:active {
 	color: #c3996e;
@@ -249,7 +249,7 @@ a:hover, a:focus, a:active {
 	background-color: #FBFBFB;
 }
 .sort .sort-text {
-	display: inline-block;
+	display: none;
 	position: relative;
 	margin-right: 1.2rem;
 	text-transform: uppercase;
@@ -257,12 +257,12 @@ a:hover, a:focus, a:active {
 	-webkit-font-smoothing: antialiased;
 	font-size: .9rem;
 }
-.sort .sort-text:after {
+.sort .icon:after {
 	display: inline-block;
 	content: '';
 	position: absolute;
-	top: 40%;
-	right: -1.2rem;
+	top: 42%;
+	left: -.6rem;
 	border: solid transparent;
 	content: " ";
 	height: 0;
@@ -273,6 +273,10 @@ a:hover, a:focus, a:active {
 	border-top-color: #e4b17d;
 	border-width: 5px;
 	margin-left: -5px;
+}
+.sort .icon {
+	display: inline-block;
+	position: relative;
 }
 .sort svg {
 	margin-bottom: -.35rem;
@@ -290,7 +294,7 @@ a:hover, a:focus, a:active {
 .intro h1 {
 	font-family: 'GT-Cinetype-Trial-Bold';
 	text-transform: capitalize;
-	font-size: 6vmax;
+	font-size: 2rem;
 	line-height: 1;
 	text-align: center;
 	margin: 0 0 1rem 0;
@@ -608,6 +612,12 @@ a:hover, a:focus, a:active {
 	background-position: 50% 50%;
 	height: 100%;*/
 }
+.search button {
+	margin-top: 10px;
+}
+button a:link, .search button a:visited {
+	color: #FFF;
+}
 
 
 .search, .story-list {
@@ -634,7 +644,7 @@ a:hover, a:focus, a:active {
 	color: #333;
 }
 .post-information input.headline {
-	font-family: 'MillerBanner';
+	font-family: 'GT-Cinetype-Trial-Bold';
 	text-transform: capitalize;
 	font-size: 3.4rem;
 	line-height: 1;
@@ -755,6 +765,12 @@ input:focus, textarea:focus {
 	.masthead {
 		padding: 2.5rem 5%;
 	}
+	.intro h1 {
+		font-size: 3rem;
+	}
+	.sort .sort-text {
+		display: inline-block;
+	}
 	#timeline {
 		padding: 2.5rem 5%;
 		padding-top: 11rem;
@@ -767,9 +783,11 @@ input:focus, textarea:focus {
 }
 
 @media(min-width: 46rem) {
-
 	.intro {
 		padding: 6rem 5% 4rem 5%;
+	}
+	.intro h1 {
+		font-size: 5rem;
 	}
 	#timeline > div .timelineRowsHeading, #timeline > div .timelineRowDates {
 		opacity: 0;
